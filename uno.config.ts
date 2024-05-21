@@ -1,5 +1,4 @@
 import presetRemToPx from '@unocss/preset-rem-to-px'
-import presetTagify from '@unocss/preset-tagify'
 import {
   Rule,
   defineConfig,
@@ -11,7 +10,7 @@ import {
 
 const theme = (() => {
   const hslB = Object.fromEntries(
-    new Array(100).fill(0).map((_, i) => [`hslb${i}`, `hsl(217 100 ${i})`])
+    new Array(100).fill(0).map((_, i) => [`hslb.${i}`, `hsl(217 100 ${i})`]),
   )
   return {
     colors: { ...hslB },
@@ -37,7 +36,7 @@ const layout: Rule<object> = [
 ]
 
 const border: Rule<object> = [
-  /b-(\d+)-([^-]+)-?(t|r|b|l)?/,
+  /b-(\d+\.\d+|\d+)-([^-]+)-?(t|r|b|l)?/,
   ([_, width, color, direction]) => ({
     [`border${direction ? `-${normal(direction)}` : ''}`]: `${width}px solid ${normalColor(color)}`,
   }),
@@ -110,7 +109,7 @@ const pathFill: Rule<object> = [
 
 export default defineConfig({
   theme,
-  presets: [presetUno(), presetTagify(), presetRemToPx({ baseFontSize: 4 })],
+  presets: [presetUno(), presetRemToPx({ baseFontSize: 4 })],
   transformers: [transformerCompileClass(), transformerVariantGroup()],
   rules: [
     widthHeightRadius,

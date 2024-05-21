@@ -10,13 +10,13 @@
     "prefix": "comp",
     "body": [
       "import { FC, memo } from 'react'",
-      "import { Flex } from '~/view/ui-utility/widget/flex'",
+      "import { Flex } from '~/view/widget/flex'",
       "",
       "export const $1${TM_FILENAME_BASE}Comp: FC<{}> = memo(({}) => {",
       "  return <Flex className='lay'></Flex>",
-      "})"
+      "})",
     ],
-    "description": "Component"
+    "description": "Component",
   },
   "Sub Component": {
     "prefix": "subcomp",
@@ -24,9 +24,9 @@
     "body": [
       "const $1Comp = useMemoComp([], ({}) => {",
       "  return (<Flex className='lay'></Flex>)",
-      "})"
+      "})",
     ],
-    "description": "Sub Component"
+    "description": "Sub Component",
   },
   "Widget": {
     "prefix": "widget",
@@ -39,9 +39,9 @@
       "",
       "export const $1${TM_FILENAME_BASE} = forwardRef<HTMLDivElement, I$1${TM_FILENAME_BASE}>(({ className, ...rest }, ref) => {",
       "  return <Flex className='' {...rest} ref={ref}></Flex>",
-      "})"
+      "})",
     ],
-    "description": "Widget"
+    "description": "Widget",
   },
   "Service": {
     "prefix": "service",
@@ -55,13 +55,13 @@
       "}",
       "",
       "export const $1${TM_FILENAME_BASE} = new $1${TM_FILENAME_BASE}Service()",
-      ""
+      "",
     ],
-    "description": "Service"
+    "description": "Service",
   },
   "Flex": {
     "prefix": "Flex",
     "body": ["<Flex className='lay'></Flex>"],
-    "description": "flex"
+    "description": "flex",
   },
 }

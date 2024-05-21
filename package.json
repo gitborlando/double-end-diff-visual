@@ -11,21 +11,22 @@
     "reinstall": "rm -rf node_modules && cnpm install"
   },
   "dependencies": {
+    "@types/react-transition-group": "^4.4.10",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-json-view": "^1.21.3",
-    "react-promise-suspense": "^0.3.4"
+    "react-promise-suspense": "^0.3.4",
+    "react-transition-group": "^4.4.5"
   },
   "devDependencies": {
     "@types/node": "^20.12.12",
     "@types/react": "^18.3.2",
     "@types/react-dom": "^18.3.0",
-    "@unocss/preset-rem-to-px": "^0.60.2",
+    "@unocss/preset-rem-to-px": "^0.58.9",
     "@vitejs/plugin-react": "^4.2.1",
     "husky": "^9.0.11",
     "pretty-quick": "^4.0.0",
     "typescript": "^5.4.5",
-    "unocss": "^0.60.2",
+    "unocss": "^0.58.9",
     "vite": "^5.2.11",
     "vite-plugin-react-click-to-component": "^3.0.0"
   }

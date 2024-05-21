@@ -1,9 +1,8 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>屎羊羊编辑器</title>
     <style>
       @layer floor {
         * {
@@ -12,14 +11,16 @@
           box-sizing: border-box;
           user-select: none;
         }
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
       }
-      h4 {
-        font-size: 11px;
-      }
-      input::-webkit-outer-spin-button,
-      input::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
+      #root {
+        width: 100vw;
+        height: 100vh;
+        position: relative;
       }
     </style>
   </head>
