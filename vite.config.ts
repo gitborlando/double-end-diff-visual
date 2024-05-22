@@ -6,6 +6,7 @@ import { reactClickToComponent } from 'vite-plugin-react-click-to-component'
 
 export default defineConfig(() => {
   return {
+    base: 'double-end-diff-visual',
     plugins: [react(), unocss(), reactClickToComponent()],
     resolve: {
       alias: {
